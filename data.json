@@ -1,0 +1,112 @@
+{
+  "about": {
+    "name": "Roopesh S",
+    "roles": ["SDET", "Data Engineer", "Automation Architect"],
+    "objective": "Smart requirement-driven professional with 6+ years of experience in Test & Development with additional expertise in Data Engineering & Full Stack Development. Specialized in Project Management, Client Coordination, and Integrated Planning.",
+    "resume_link": "#"
+  },
+  "skills": {
+    "technical Skills": {
+      "web_automation": ["Selenium", "Playwright", "Cypress"],
+      "programming_languages": ["Python", "Java", "JavaScript", "TypeScript"],
+      "api_automation": ["Rest Assured", "Requests", "Postman", "JMeter"],
+      "etl_tools": ["PySpark", "SQL", "NoSQL", "Apache Airflow"],
+      "databases": ["Denodo", "MS SQL Server", "Teradata"],
+      "cloud_platforms": ["Snowflake", "Azure Databricks", "Azure Data Factory", "AWS S3", "GCP"],
+      "devops": ["Jenkins", "TeamCity", "Azure DevOps", "Octopus"],
+      "testing_exposure": ["Full stack Automation", "Regression", "Performance Testing", "LLM Testing", "Security Testing"]
+    },
+    "management_Skills": {
+      "leadership": ["Team Leadership", "Test Planning", "Documentation", "SDLC/STLC"],
+      "soft_skills": ["Communication", "Mentorship", "Business Analysis"]
+    }
+  },
+  "experience": [
+    {
+      "role": "Automation Engineer",
+      "company": "V2Soft Pvt Ltd",
+      "tenure": "November 2023 - Present",
+      "one_liner": "Built and scheduled test automations for ETL, APIs, and UI, achieving 70% performance growth.",
+      "responsibilities": [
+        "Built and scheduled multiple test automations using Databricks PySpark and Azure Data Factory for ETL processes, ensuring 100% test coverage.",
+        "Developed performance and load testing suites for APIs using JMeter and Postman with end-to-end integrations.",
+        "Achieved 70% performance improvement in ETL and test architecture redesign using OOP and optimisations.",
+        "Monitored regular test reports using ELK, Jenkins, Pytest, and Azure DevOps across 4 sprints.",
+        "Migrated Java Selenium UI automation to Playwright, improving test speed and reliability.",
+        "Automated API tests with Serenity BDD, Java, and Rest Assured to validate vehicle cloud data services.",
+        "Contributed to QA design documents, creating test strategies for LLM testing, RAG evaluations, prompt accuracy validation, and retrieval relevance."
+      ]
+    },
+    {
+      "role": "Associate Consultant (QA Lead)",
+      "company": "DecisionNxt Ltd",
+      "tenure": "November 2023 - April 2025",
+      "one_liner": "Led QA & automation for Power BI dashboards and cloud pipelines, improving ETL efficiency.",
+      "responsibilities": [
+        "Ensured 100% regression coverage for Power BI dashboard validation with UI and ETL automation.",
+        "Organised test strategy and implemented automatic daily report generation using Airflow and Jenkins.",
+        "Managed Scrum, test documentation, QAOps, and requirement analysis for successful project delivery.",
+        "Optimised ETL and cloud testing performance on SSMS, Denodo, Snowflake, Teradata, PowerBI, and Azure Functions, reducing data processing errors.",
+        "Automated end-to-end system integration testing using Cypress, Chai, and Robot Framework."
+      ]
+    },
+    {
+      "role": "Technology Analyst (Senior Tester)",
+      "company": "Infosys Ltd",
+      "tenure": "September 2021 - October 2023",
+      "one_liner": "Handled test strategies, DevOps integration, and performance optimisation for client projects.",
+      "responsibilities": [
+        "Led INDIGO Books and Music project test strategies, business analytics, sprint management, and production support.",
+        "Performed DevOps integration testing on TeamCity and Octopus, building CI/CD pipelines for console and ETL applications on Azure.",
+        "Optimised test scripts to reduce blindspots and data latency using Databricks, Azure Functions, ADF pipelines, SSMS, Data Warehouse, and Data Lake.",
+        "Enhanced system design and test architecture for UI automation using Playwright over Selenium.",
+        "Planned, executed, and managed API, mobile apps, cloud, and security testing."
+      ]
+    },
+    {
+      "role": "Test Engineer",
+      "company": "Sun Technologies Pvt Ltd",
+      "tenure": "March 2020 - August 2021",
+      "one_liner": "Performed automation and performance testing for APIs and web apps using Python, Java, and Selenium frameworks.",
+      "responsibilities": [
+        "Built browser and REST API automation using Selenium, Rest Assured, Serenity BDD, and Pytest for rapid regression reporting.",
+        "Organised load and performance testing on APIs and web apps using JMeter, BlazeMeter, and Postman.",
+        "Managed SDLC and test strategies with Jira, Zephyr Scale, Agile, GitHub, Xray, and SonarQube.",
+        "Conducted compliance validation for Android and iOS applications, ensuring ETL data integrity and end-to-end QA standards."
+      ]
+    }
+  ]
+  ,
+  "projects": [
+    {
+      "title": "Automated ETL Framework",
+      "description": "A high-performance data validation engine built with PySpark and Azure Databricks.",
+      "tags": ["Python", "Databricks", "ETL"],
+      "link": "#"
+    },
+    {
+      "title": "Automated ETL Framework",
+      "description": "A high-performance data validation engine built with PySpark and Azure Databricks.",
+      "tags": ["Python", "Databricks", "ETL"],
+      "link": "#"
+    }
+  ],
+  "certifications": [
+    {"name": "Project Management Fundamentals","provider":"IBM", "year": 2025, "link":"#"},
+    {"name": "Python Associate Developer","provider":"MongoDB",  "year": 2025, "link":"#"},
+    {"name": "Data Analyst","provider":"Findem", "year": 2020, "link":"#"}
+  ],
+  "contact": {
+    "email": "roopesharch@gmail.com",
+    "phone": "+91 9972572790",
+    "location": "Bangalore, India",
+    "socials": [
+      {"platform": "linkedin", "url": "https://www.linkedin.com/in/roopeh-arch/"},
+      {"platform": "github", "url": "https://github.com/roopesharch"}
+    ]
+  },
+  "languages": {
+  "Spoken": ["English", "Hindi", "Telugu", "Kannada", "Tamil"],
+  "Read & write": ["English", "Hindi", "Telugu", "Kannada"]
+    }
+}
