@@ -3,22 +3,22 @@
     "name": "Roopesh S",
     "roles": ["SDET", "Data Engineer", "Automation Architect"],
     "objective": "Smart requirement-driven professional with 6+ years of experience in Test & Development with additional expertise in Data Engineering & Full Stack Development. Specialized in Project Management, Client Coordination, and Integrated Planning.",
-    "resume_link": "#"
+    "resume_link": "Resume.pdf"
   },
   "skills": {
-    "technical Skills": {
-      "web_automation": ["Selenium", "Playwright", "Cypress"],
-      "programming_languages": ["Python", "Java", "JavaScript", "TypeScript"],
-      "api_automation": ["Rest Assured", "Requests", "Postman", "JMeter"],
-      "etl_tools": ["PySpark", "SQL", "NoSQL", "Apache Airflow"],
-      "databases": ["Denodo", "MS SQL Server", "Teradata"],
-      "cloud_platforms": ["Snowflake", "Azure Databricks", "Azure Data Factory", "AWS S3", "GCP"],
-      "devops": ["Jenkins", "TeamCity", "Azure DevOps", "Octopus"],
-      "testing_exposure": ["Full stack Automation", "Regression", "Performance Testing", "LLM Testing", "Security Testing"]
+    "Technical Skills": {
+      "Web Automation": ["Selenium", "Playwright", "Cypress"],
+      "Programming Languages": ["Python", "Java", "JavaScript", "TypeScript"],
+      "API Automation": ["Rest Assured", "Requests", "Postman", "JMeter"],
+      "ETL Tools": ["PySpark", "SQL", "NoSQL", "Apache Airflow"],
+      "Databases": ["Denodo", "MS SQL Server", "Teradata"],
+      "Cloud Platforms": ["Snowflake", "Azure Databricks", "Azure Data Factory", "AWS S3", "GCP"],
+      "Devops": ["Jenkins", "TeamCity", "Azure DevOps", "Octopus"],
+      "QA Skills": ["Full stack Automation", "Regression", "Performance Testing", "LLM Testing", "Security Testing", "Quality Assurance Audits"]
     },
-    "management_Skills": {
-      "leadership": ["Team Leadership", "Test Planning", "Documentation", "SDLC/STLC"],
-      "soft_skills": ["Communication", "Mentorship", "Business Analysis"]
+    "Management Skills": {
+      "Project Management": ["Test Planning", "Documentation", "SDLC/STLC","Scrum management", "AGile", "Risk Management", "Compliance", "Report Genaration"],
+      "Soft Skills": ["Communication", "Mentorship", "Business Analysis","Team Leadership"]
     }
   },
   "experience": [
@@ -83,18 +83,12 @@
       "description": "A high-performance data validation engine built with PySpark and Azure Databricks.",
       "tags": ["Python", "Databricks", "ETL"],
       "link": "#"
-    },
-    {
-      "title": "Automated ETL Framework",
-      "description": "A high-performance data validation engine built with PySpark and Azure Databricks.",
-      "tags": ["Python", "Databricks", "ETL"],
-      "link": "#"
     }
   ],
   "certifications": [
-    {"name": "Project Management Fundamentals","provider":"IBM", "year": 2025, "link":"#"},
-    {"name": "Python Associate Developer","provider":"MongoDB",  "year": 2025, "link":"#"},
-    {"name": "Data Analyst","provider":"Findem", "year": 2020, "link":"#"}
+    {"name": "Project Management Fundamentals","provider":"IBM", "year": 2025, "link":"https://www.credly.com/badges/9a06856f-7fb0-45ab-9bc4-2a7908f95987"},
+    {"name": "Python Associate Developer","provider":"MongoDB",  "year": 2025, "link":"https://www.credly.com/badges/c2185eaa-9b28-4d37-a417-f96ab62fd233"},
+    {"name": "Jenkins Essential Training","provider":"linkedin", "year": 2025, "link":"https://www.linkedin.com/learning/certificates/955001afe9156bb7a5be86511da1f29c33cdbbc8c843a9d63f3915ec7e87813e/?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BTTejz%2FVtRjKOpVj3giKRrA%3D%3D"}
   ],
   "contact": {
     "email": "roopesharch@gmail.com",
