@@ -34,7 +34,7 @@ async function buildPortfolio() {
         skillsContainer.innerHTML = ''; 
         for (const [mainCatName, subGroups] of Object.entries(data.skills)) {
             const catHeader = document.createElement('h3');
-            catHeader.style.cssText = "font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin: 40px 0 20px; border-left: 3px solid var(--primary); padding-left: 15px;";
+            catHeader.style.cssText = "font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin: 1px 0 1px; border-left: 3px solid var(--primary); padding-left: 15px;";
             catHeader.textContent = mainCatName.replace(/_/g, ' ');
             skillsContainer.appendChild(catHeader);
             const grid = document.createElement('div');
@@ -88,13 +88,14 @@ async function buildPortfolio() {
             };
         });
 
-        // 5. Projects
+        // 5.  Projects
         const projectsContainer = document.getElementById('projects-container');
         projectsContainer.innerHTML = data.projects.map(proj => `
             <div class="experience-box" style="cursor: default; border-left: 4px solid var(--primary);">
                 <h4 style="font-weight: 800; margin-bottom: 5px;">${proj.title}</h4>
+                <div style="color:var(--primary); font-weight:600; font-size:0.8rem; margin-bottom:10px;">${proj.date}</div>
                 <p style="font-family: var(--font-accent); color: var(--text-main); margin-bottom: 20px;">${proj.description}</p>
-                <a href="${proj.link}" target="_blank" class="nav-pill">View Case Study →</a>
+                <a href="${proj.link}" target="_blank" class="nav-pill">View Details →</a>
             </div>
         `).join('');
 
@@ -148,6 +149,7 @@ async function buildPortfolio() {
         document.getElementById('global-skill-toggle').addEventListener('change', function() {
             const allContents = document.querySelectorAll('.dropdown-content');
             const allArrows = document.querySelectorAll('.arrow');
+            document.getElementById('skills-section').scrollIntoView({ behavior: 'smooth' });
             allContents.forEach(c => this.checked ? c.classList.remove('collapsed') : c.classList.add('collapsed'));
             allArrows.forEach(a => a.style.transform = this.checked ? 'rotate(180deg)' : 'rotate(0deg)');
         });

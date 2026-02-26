@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
 
+
 :root {
     --primary: #4338ca; 
     --primary-hover: #3730a3;
@@ -33,7 +34,7 @@ body {
 .nav-pill:hover, .nav-pill-btn:hover { background: var(--dark); color: white; border-color: var(--dark); transform: translateY(-3px); }
 
 /* --- HERO SECTION --- */
-.hero-section { background: radial-gradient(at top left, #f1f5f9, #ffffff); padding-bottom: 80px; border-bottom: 1px solid #e2e8f0; }
+.hero-section { background: radial-gradient(at top left, #f1f5f9, #ffffff); padding-bottom: 100px; border-bottom: 1px solid #e2e8f0; }
 .hero-layout { display: flex; margin-top: 40px; }
 .hero-left { display: flex; gap: 50px; align-items: flex-start; width: 100%; }
 .photo-ring { width: 180px; height: 180px; border-radius: 20px; padding: 6px; background: white; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05); flex-shrink: 0;}
@@ -42,8 +43,8 @@ body {
 .hero-roles { font-size: 0.95rem; color: var(--primary); font-weight: 600; margin: 20px 0 15px; text-transform: uppercase; letter-spacing: 0.15em; }
 .hero-bio { font-family: var(--font-accent); font-size: 1.25rem; font-style: italic; color: var(--text-muted); margin: 0; width: 95%; line-height: 1.7; text-align: justify;}
 .objective-container { display: flex; align-items: center; width: 100%; margin-bottom: 40px; }
-.logo-spacer { flex: 1; display: flex; justify-content: flex-end; padding-left: 40px; }
-.sdet-logo { width: 180px; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.logo-spacer { flex: 10; display: flex; justify-content: flex-end; padding-left: 5px; }
+.sdet-logo { width: 200px; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 .sdet-logo:hover { transform: scale(1.17); }
 
 .btn { padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: 0.3s; cursor: pointer; border: none; font-family: var(--font-main); display: inline-flex; align-items: center; }
@@ -53,11 +54,11 @@ body {
 .btn-outline:hover { background: var(--dark); color: white; transform: translateY(-2px); }
 
 /* --- SKILLS --- */
-.skills-header-flex { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 100px; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; }
-.main-section-title { font-size: 2rem; font-weight: 800; color: var(--dark); }
-.subskill-grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 40px; }
-.skill-dropdown-wrapper { background: white; border: 1.5px solid #e2e8f0; border-radius: 8px; position: relative; }
-.dropdown-trigger { padding: 12px 15px; cursor: pointer; display: flex; justify-content: space-between; font-weight: 600; font-size: 0.8rem; }
+.skills-header-flex { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 1px; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; }
+.main-section-title { font-size: 2rem; font-weight: 850; color: var(--dark); }
+.subskill-grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 10px; }
+.skill-dropdown-wrapper { background: white; border: 1.5px solid #e2e8f0; border-radius: 8px; position: relative;  }
+.dropdown-trigger { padding: 8px 15px; cursor: pointer; display: flex; justify-content: space-between; font-weight: 600; font-size: 0.8rem; }
 .dropdown-content { padding: 10px; display: flex; flex-wrap: wrap; gap: 6px; overflow: hidden; transition: 0.3s; }
 .dropdown-content.collapsed { max-height: 0; padding: 0; opacity: 0; }
 .tag { background: #f1f5f9; color: #475569; padding: 4px 10px; border-radius: 4px; font-size: 0.65rem; font-weight: 600; border: 1px solid #e2e8f0; }

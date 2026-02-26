@@ -2,23 +2,83 @@
   "about": {
     "name": "Roopesh S",
     "roles": ["SDET", "Data Engineer", "Automation Architect"],
-    "objective": "Smart requirement-driven professional with 6+ years of experience in Test & Development with additional expertise in Data Engineering & Full Stack Development. Specialized in Project Management, Client Coordination, and Integrated Planning.",
+    "objective": "Senior SDET and Quality Engineering specialist with 6+ years of experience architecting scalable automation, cloud data validation frameworks, and DevOps-driven quality pipelines. I engineer reliability into distributed cloud and AI ecosystems, ensuring quality is a foundational component of the architecture, not an afterthought.",
     "resume_link": "Resume.pdf"
   },
   "skills": {
-    "Technical Skills": {
-      "Web Automation": ["Selenium", "Playwright", "Cypress"],
-      "Programming Languages": ["Python", "Java", "JavaScript", "TypeScript"],
-      "API Automation": ["Rest Assured", "Requests", "Postman", "JMeter"],
-      "ETL Tools": ["PySpark", "SQL", "NoSQL", "Apache Airflow"],
-      "Databases": ["Denodo", "MS SQL Server", "Teradata"],
-      "Cloud Platforms": ["Snowflake", "Azure Databricks", "Azure Data Factory", "AWS S3", "GCP"],
-      "Devops": ["Jenkins", "TeamCity", "Azure DevOps", "Octopus"],
-      "QA Skills": ["Full stack Automation", "Regression", "Performance Testing", "LLM Testing", "Security Testing", "Quality Assurance Audits"]
+    "Test Automation & Engineering": {
+      "UI Automation": [
+        "Selenium",
+        "Playwright",
+        "Cypress"
+      ],
+      "API & Microservices": [
+        "Rest Assured",
+        "Postman",
+        "Python Requests"
+      ],
+      "Performance Testing": [
+       "JMeter", "BlazeMeter"
+      ],
+      "Framework Design": [
+        "PyTest",
+        "Robot Framework",
+        "Serenity BDD"
+      ],
+      "Architecture & Strategy": [
+        "End-to-End Automation",
+        "Regression Strategy",
+        "CI/CD Integration",
+        "LLM Testing",
+        "RAG Validation",
+        "Security Testing",
+        "Quality Assurance Audits"
+      ]
     },
-    "Management Skills": {
-      "Project Management": ["Test Planning", "Documentation", "SDLC/STLC","Scrum management", "AGile", "Risk Management", "Compliance", "Report Genaration"],
-      "Soft Skills": ["Communication", "Mentorship", "Business Analysis","Team Leadership"]
+    "Data & Cloud Quality Engineering": {
+      "ETL & Data Validation": [
+        "PySpark", "SQL", "NoSQL", "Apache Airflow"
+      ],
+      "Data Platforms": [
+        "Snowflake",  "Azure Databricks", "Azure Data Factory"
+      ],
+      "Databases visualization": [
+        "MS SQL Server", "Teradata", "Denodo", "MySQL", "MongoDB"
+      ],
+      "Cloud Platforms & Storage": [
+        "AWS S3", "Azure DataLake", "Azure Blob Containers"
+      ]
+    },
+    "DevOps & Infrastructure": {
+      "CI/CD Pipelines": [
+        "Jenkins", "TeamCity", "Azure DevOps", "Octopus Deploy"
+      ],
+      "Version Control": [
+        "Git", "BitBucket"
+      ],
+      "Operating Systems": [
+        "Linux", "Ubuntu", "Windows", "Mac"
+      ]
+    },
+    "Leadership & Management": {
+      "Project & QA Governance": [
+        "Test Planning",
+        "Documentation",
+        "SDLC",
+        "STLC",
+        "Scrum",
+        "Agile",
+        "Risk Management",
+        "Compliance",
+        "Report Generation"
+      ],
+      "Professional Skills": [
+        "Communication",
+        "Mentorship",
+        "Business Analysis",
+        "Team Leadership",
+        "Stakeholder Management"
+      ]
     }
   },
   "experience": [
@@ -26,63 +86,71 @@
       "role": "Automation Engineer",
       "company": "V2Soft Pvt Ltd",
       "tenure": "November 2023 - Present",
-      "one_liner": "Built and scheduled test automations for ETL, APIs, and UI, achieving 70% performance growth.",
+      "one_liner": "Led end-to-end Quality Engineering for cloud-native ETL, API, and AI-driven systems — delivering scalable automation architecture, CI/CD-integrated validation, and measurable performance optimization across distributed Azure environments.",
       "responsibilities": [
-        "Built and scheduled multiple test automations using Databricks PySpark and Azure Data Factory for ETL processes, ensuring 100% test coverage.",
-        "Developed performance and load testing suites for APIs using JMeter and Postman with end-to-end integrations.",
-        "Achieved 70% performance improvement in ETL and test architecture redesign using OOP and optimisations.",
-        "Monitored regular test reports using ELK, Jenkins, Pytest, and Azure DevOps across 4 sprints.",
-        "Migrated Java Selenium UI automation to Playwright, improving test speed and reliability.",
-        "Automated API tests with Serenity BDD, Java, and Rest Assured to validate vehicle cloud data services.",
-        "Contributed to QA design documents, creating test strategies for LLM testing, RAG evaluations, prompt accuracy validation, and retrieval relevance."
+        "Engineered scalable ETL test automation frameworks using Databricks (PySpark) and Azure Data Factory, achieving 100% validation coverage across complex cloud data pipelines.",
+        "Architected performance and load testing suites for high-traffic APIs using JMeter and Postman, fully integrated into CI/CD workflows for production-grade stability.",
+        "Delivered a 70% improvement in ETL performance through OOP-driven test architecture redesign and execution optimization.",
+        "Implemented real-time quality monitoring and automated reporting using ELK, Jenkins, PyTest, and Azure DevOps across multiple sprint cycles.",
+        "Led migration from legacy Java Selenium frameworks to Playwright, significantly enhancing execution speed, reliability, and maintainability.",
+        "Automated end-to-end API validation using Serenity BDD, Java, and REST Assured to ensure integrity and security of distributed vehicle cloud data services.",
+        "Established structured QA strategies for Generative AI systems, including LLM validation, RAG retrieval evaluation, prompt accuracy testing, and production reliability benchmarking."
+
       ]
     },
     {
       "role": "Associate Consultant (QA Lead)",
       "company": "DecisionNxt Ltd",
       "tenure": "November 2023 - April 2025",
-      "one_liner": "Led QA & automation for Power BI dashboards and cloud pipelines, improving ETL efficiency.",
+      "one_liner": "Led strategic Quality Engineering transformation across cloud, data, and AI platforms — architecting automation frameworks, embedding DevOps quality gates, and scaling validation across distributed enterprise systems.",
       "responsibilities": [
-        "Ensured 100% regression coverage for Power BI dashboard validation with UI and ETL automation.",
-        "Organised test strategy and implemented automatic daily report generation using Airflow and Jenkins.",
-        "Managed Scrum, test documentation, QAOps, and requirement analysis for successful project delivery.",
-        "Optimised ETL and cloud testing performance on SSMS, Denodo, Snowflake, Teradata, PowerBI, and Azure Functions, reducing data processing errors.",
-        "Automated end-to-end system integration testing using Cypress, Chai, and Robot Framework."
+        "Spearheaded end-to-end QA transformation initiatives, aligning technical strategy with business goals and transitioning manual processes into scalable, automation-driven engineering workflows.",
+        "Architected distributed data validation pipelines using Databricks (PySpark), Azure Data Factory, and Snowflake, ensuring data integrity across Azure Data Lake and AWS EMR environments.",
+        "Engineered high-performance 'Gold Master' automation frameworks using Playwright (JavaScript), PyTest/Robot Framework (Python), and Serenity (Java), delivering a 70% increase in execution efficiency.",
+        "Integrated automated quality gates into CI/CD pipelines using Jenkins and Azure DevOps, establishing real-time system observability with the ELK Stack for full sprint-level transparency.",
+        "Established structured QA frameworks for Generative AI systems, including RAG retrieval evaluation, prompt accuracy validation, and production reliability benchmarking for LLM-based applications.",
+        "Orchestrated end-to-end testing across APIs (Rest Assured), performance systems (JMeter), and data layers (Denodo, Teradata), delivering high-reliability cloud services for enterprise and Medical data platforms."
+
       ]
     },
     {
       "role": "Technology Analyst (Senior Tester)",
       "company": "Infosys Ltd",
       "tenure": "September 2021 - October 2023",
-      "one_liner": "Handled test strategies, DevOps integration, and performance optimisation for client projects.",
+      "one_liner": "Directed enterprise-scale Quality Engineering and DevOps delivery for cloud-native data platforms, optimizing automation frameworks and eliminating data validation blind spots",
       "responsibilities": [
-        "Led INDIGO Books and Music project test strategies, business analytics, sprint management, and production support.",
-        "Performed DevOps integration testing on TeamCity and Octopus, building CI/CD pipelines for console and ETL applications on Azure.",
-        "Optimised test scripts to reduce blindspots and data latency using Databricks, Azure Functions, ADF pipelines, SSMS, Data Warehouse, and Data Lake.",
-        "Enhanced system design and test architecture for UI automation using Playwright over Selenium.",
-        "Planned, executed, and managed API, mobile apps, cloud, and security testing."
+      "Directed end-to-end QA strategy and business-aligned delivery for Indigo Books & Music, managing sprint planning, release validation, production deployments, and stakeholder coordination.",
+      "Engineered CI/CD-driven integration pipelines using TeamCity and Octopus Deploy, streamlining delivery of console applications and backend ETL workflows across Azure environments.",
+      "Optimized Databricks processing and Azure Functions to eliminate data latency and validation blind spots, improving performance and reliability across Data Lake and Warehouse systems.",
+      "Led migration from legacy Selenium frameworks to Playwright, architecting a modern, resilient UI automation ecosystem for web applications.",
+      "Designed multi-layered quality strategies spanning API, Cloud, and Security testing, leveraging SQL and NoSQL validation to ensure integrity of complex, unstructured enterprise data systems."
+
       ]
     },
     {
       "role": "Test Engineer",
       "company": "Sun Technologies Pvt Ltd",
       "tenure": "March 2020 - August 2021",
-      "one_liner": "Performed automation and performance testing for APIs and web apps using Python, Java, and Selenium frameworks.",
+      "one_liner": "Drove large-scale regression automation and performance validation initiatives, improving execution efficiency by 60% while delivering full-stack and mobile quality assurance across enterprise platforms.",
       "responsibilities": [
-        "Built browser and REST API automation using Selenium, Rest Assured, Serenity BDD, and Pytest for rapid regression reporting.",
-        "Organised load and performance testing on APIs and web apps using JMeter, BlazeMeter, and Postman.",
-        "Managed SDLC and test strategies with Jira, Zephyr Scale, Agile, GitHub, Xray, and SonarQube.",
-        "Conducted compliance validation for Android and iOS applications, ensuring ETL data integrity and end-to-end QA standards."
+        "Increased regression efficiency by 60% within seven months by implementing CI/CD-integrated PyTest and BDD automation frameworks.",
+        "Architected full-stack UI and API automation suites using Python (Requests), Java (Selenium, Serenity BDD), and Rest Assured, delivering rapid reporting and comprehensive enterprise test coverage.",
+        "Led performance and scalability validation for web and API platforms using JMeter and BlazeMeter, identifying bottlenecks and ensuring stability under high-traffic conditions.",
+        "Validated end-to-end mobile application integrity and compliance across Android and iOS ecosystems using structured test management and release validation workflows.",
+        "Managed Agile SDLC processes using Jira (Zephyr Scale, Xray), GitHub, and SonarQube, coordinating across distributed 24/7 teams to deliver high-performance releases.",
+        "Promoted from Junior Analyst to Level 1 Test Engineer in recognition of strong client satisfaction, technical leadership, and contributions to integration and black-box testing initiatives."
+
       ]
     }
   ]
   ,
   "projects": [
     {
-      "title": "Automated ETL Framework",
-      "description": "A high-performance data validation engine built with PySpark and Azure Databricks.",
-      "tags": ["Python", "Databricks", "ETL"],
-      "link": "#"
+      "title": "ResuBuild Pro: Dynamic Multi-Template Career Architect",
+      "date": "December 2018 - February 2019",
+      "description": "A robust PHP-driven platform that automates resume creation. It securely processes user data via a MySQL backend to instantly generate professional profiles across multiple customizable templates.",
+      "tags": ["Python","PHP", "HTML","CSS","Javascript"],
+      "link": "https://github.com/roopesharch/ResumeEngine"
     }
   ],
   "certifications": [
