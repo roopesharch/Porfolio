@@ -3,6 +3,12 @@ async function buildPortfolio() {
         const response = await fetch('data.json');
         const data = await response.json();
 
+        const downloadBtn = document.getElementById('download-link');
+        if (data.about.resume_link) {
+            // This ensures the link matches "Resume.pdf" from your JSON exactly
+            downloadBtn.setAttribute('href', data.about.resume_link);
+        }
+
         // 1. Hero Content
         document.getElementById('user-name').textContent = data.about.name;
         document.getElementById('user-roles').textContent = data.about.roles.join(' • ');
