@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>Admin Access</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <a href="../index.html" class="btn-back">Return to Portfolio</a>
+    <div id="login-panel" style="max-width:350px; margin:100px auto; background:var(--panel-bg); padding:30px; border-radius:12px;">
+        <h2 style="text-align:center; margin-top:0;">Secure Login</h2>
+        <form id="login-form">
+            <div class="form-group" style="border:none; padding:0;">
+                <label>Email</label>
+                <input type="email" id="email" required style="background:#0f172a; border:1px solid #334155; color:white;">
+            </div>
+            <div class="form-group" style="border:none; padding:0; margin-top:15px;">
+                <label>Password</label>
+                <input type="password" id="pass" required style="background:#0f172a; border:1px solid #334155; color:white;">
+            </div>
+            <button type="submit" id="unlock-btn" class="btn-save" style="width:100%; margin-top:20px; padding:12px; cursor:pointer;">Unlock Vault</button>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

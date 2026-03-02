@@ -1,13 +1,29 @@
+/**
+ * GOLD MASTER CODE: Supabase Integration
+ * Features: Auto-scroll on Expand All, Mouse-leave auto-collapse, and Supabase data fetching.
+ */
+
 async function buildPortfolio() {
     try {
-        const response = await fetch('data.json');
-        const data = await response.json();
+        // --- SUPABASE CONFIGURATION ---
+        const SUPABASE_URL = 'https://irkywlnfizmlzkltbepk.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlya3l3bG5maXptbHprbHRiZXBrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0NjM1ODIsImV4cCI6MjA4ODAzOTU4Mn0.10xYnVeD4SEdvpoCs9-ZU1cJRv8iCGLt5ELgbSWoFXE';
 
-        const downloadBtn = document.getElementById('download-link');
-        if (data.about.resume_link) {
-            // This ensures the link matches "Resume.pdf" from your JSON exactly
-            downloadBtn.setAttribute('href', data.about.resume_link);
-        }
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/portfolio_metadata?category=eq.master_data&select=content`, {
+            method: 'GET',
+            headers: {
+                'apikey': SUPABASE_ANON_KEY,
+                'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) throw new Error("Failed to fetch portfolio data");
+
+        const result = await response.json();
+        if (!result || result.length === 0) return;
+        
+        const data = result[0].content;
 
         // 1. Hero Content
         document.getElementById('user-name').textContent = data.about.name;
@@ -16,8 +32,8 @@ async function buildPortfolio() {
         
         // 2. Contact Modal Logic
         const rawPhone = data.contact.phone;
-        const cleanPhone = rawPhone.replace(/\s+/g, ''); // "+919972572790" for Dialer
-        const waPhone = rawPhone.replace(/\D/g, '');    // "919972572790" for WhatsApp
+        const cleanPhone = rawPhone.replace(/\s+/g, ''); 
+        const waPhone = rawPhone.replace(/\D/g, '');    
         
         const modalActions = document.getElementById('modal-actions');
         modalActions.innerHTML = `
@@ -35,16 +51,18 @@ async function buildPortfolio() {
             </a>
         `;
 
-        // 3. Skills Categories (Dropdowns)
+        // 3. Skills Rendering
         const skillsContainer = document.getElementById('skills-container');
         skillsContainer.innerHTML = ''; 
         for (const [mainCatName, subGroups] of Object.entries(data.skills)) {
             const catHeader = document.createElement('h3');
-            catHeader.style.cssText = "font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin: 1px 0 1px; border-left: 3px solid var(--primary); padding-left: 15px;";
+            catHeader.style.cssText = "font-size: 1rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px; margin: 25px 0 10px; border-left: 3px solid var(--primary); padding-left: 15px;";
             catHeader.textContent = mainCatName.replace(/_/g, ' ');
             skillsContainer.appendChild(catHeader);
+
             const grid = document.createElement('div');
             grid.className = 'subskill-grid-5';
+
             for (const [name, list] of Object.entries(subGroups)) {
                 const wrapper = document.createElement('div');
                 wrapper.className = 'skill-dropdown-wrapper';
@@ -55,17 +73,20 @@ async function buildPortfolio() {
                 const trigger = wrapper.querySelector('.dropdown-trigger');
                 const content = wrapper.querySelector('.dropdown-content');
                 const arrow = trigger.querySelector('.arrow');
+                
                 trigger.onclick = (e) => {
                     e.stopPropagation();
                     const isCollapsed = content.classList.toggle('collapsed');
                     arrow.style.transform = isCollapsed ? 'rotate(0deg)' : 'rotate(180deg)';
                 };
+
                 wrapper.onmouseleave = () => {
                     if (!document.getElementById('global-skill-toggle').checked) {
                         content.classList.add('collapsed');
                         arrow.style.transform = 'rotate(0deg)';
                     }
                 };
+
                 grid.appendChild(wrapper);
             }
             skillsContainer.appendChild(grid);
@@ -85,16 +106,19 @@ async function buildPortfolio() {
         `).join('');
 
         data.experience.forEach((_, i) => {
-            document.getElementById(`exp-box-${i}`).onclick = function() {
-                const list = document.getElementById(`resp-list-${i}`);
-                const label = document.getElementById(`toggle-text-${i}`);
-                const isActive = list.classList.toggle('active');
-                label.textContent = isActive ? "Click to hide details" : "Click to toggle details";
-                label.style.opacity = isActive ? "1" : "0.6";
-            };
+            const el = document.getElementById(`exp-box-${i}`);
+            if(el) {
+                el.onclick = function() {
+                    const list = document.getElementById(`resp-list-${i}`);
+                    const label = document.getElementById(`toggle-text-${i}`);
+                    const isActive = list.classList.toggle('active');
+                    label.textContent = isActive ? "Click to hide details" : "Click to toggle details";
+                    label.style.opacity = isActive ? "1" : "0.6";
+                };
+            }
         });
 
-        // 5.  Projects
+        // 5. Projects
         const projectsContainer = document.getElementById('projects-container');
         projectsContainer.innerHTML = data.projects.map(proj => `
             <div class="experience-box" style="cursor: default; border-left: 4px solid var(--primary);">
@@ -132,30 +156,30 @@ async function buildPortfolio() {
         };
 
         // 7. Languages 
+        const langContainer = document.getElementById('languages-container');
         if (data.languages) {
-            const langContainer = document.getElementById('languages-container');
             langContainer.innerHTML = Object.entries(data.languages).map(([category, list]) => `
                 <div class="lang-card-new">
                     <span class="lang-label-new">${category}</span>
-                    <div class="lang-pill-container-new">
-                        ${list.map(lang => `<span class="lang-pill-item-new">${lang}</span>`).join('')}
-                    </div>
+                    <div class="lang-pill-container-new">${list.map(l => `<span class="lang-pill-item-new">${l}</span>`).join('')}</div>
                 </div>
             `).join('');
         }
 
         document.getElementById('toggle-langs-btn').onclick = function() {
-            const langContainer = document.getElementById('languages-container');
             const isHidden = window.getComputedStyle(langContainer).display === 'none';
             langContainer.style.display = isHidden ? 'grid' : 'none';
             this.textContent = isHidden ? 'Hide Languages' : 'Show Languages';
         };
 
-        // 8. Global Expand Toggle
+        // 8. Global Expand Toggle (FIXED: Added Smooth Scroll)
         document.getElementById('global-skill-toggle').addEventListener('change', function() {
             const allContents = document.querySelectorAll('.dropdown-content');
             const allArrows = document.querySelectorAll('.arrow');
+            
+            // Scroll to top of skills section for visibility
             document.getElementById('skills-section').scrollIntoView({ behavior: 'smooth' });
+            
             allContents.forEach(c => this.checked ? c.classList.remove('collapsed') : c.classList.add('collapsed'));
             allArrows.forEach(a => a.style.transform = this.checked ? 'rotate(180deg)' : 'rotate(0deg)');
         });
@@ -166,7 +190,7 @@ async function buildPortfolio() {
         document.querySelector('.close-modal').onclick = () => modal.classList.remove('active');
         window.onclick = (e) => { if(e.target == modal) modal.classList.remove('active'); };
 
-        // 10. Final Contact Section Logic
+        // 10. Final Contact Section
         const contactGrid = document.getElementById('final-contact-grid');
         contactGrid.innerHTML = `
             <a href="https://wa.me/${waPhone}" target="_blank" class="footer-contact-card">
@@ -194,6 +218,8 @@ async function buildPortfolio() {
             `).join('')}
         `;
 
-    } catch (err) { console.error(err); }
+    } catch (err) { 
+        console.error("Data fetch failed:", err); 
+    }
 }
 document.addEventListener('DOMContentLoaded', buildPortfolio);

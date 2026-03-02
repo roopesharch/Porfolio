@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Master Admin | Gold Master</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-card">
+        <div class="editor-header">
+            <div>
+                <h2 style="margin:0;">Portfolio Database</h2>
+                <code id="user-display" style="color: var(--accent); font-size: 0.8rem;">Session Active</code>
+            </div>
+            <div class="btn-group">
+                <button id="format-btn" class="action-btn btn-format">Format JSON</button>
+                <button id="save-btn" class="action-btn btn-save">Push to Cloud</button>
+                <button id="logout-btn" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-weight:700;">Logout</button>
+            </div>
+        </div>
+
+        <div id="status" class="status-msg"></div>
+
+        <div class="view-controls">
+            <button id="view-code" class="view-btn active">Code View</button>
+            <button id="view-form" class="view-btn">Form Helper</button>
+        </div>
+
+        <textarea id="json-textarea" class="json-editor" spellcheck="false" placeholder="Fetching latest data..."></textarea>
+        
+        <div id="form-helper">
+            <div id="form-content"></div>
+        </div>
+
+        <div style="margin-top:20px; text-align: right;">
+            <a href="../index.html" style="color: var(--accent); text-decoration: none; font-size: 0.9rem; font-weight: 700;">← Exit to Portfolio</a>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+    <script src="config.js"></script>
+</body>
+</html>
