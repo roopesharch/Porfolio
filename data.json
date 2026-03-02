@@ -46,7 +46,7 @@
         "MS SQL Server", "Teradata", "Denodo", "MySQL", "MongoDB"
       ],
       "Cloud Platforms & Storage": [
-        "AWS S3", "Azure DataLake", "Azure Blob Containers"
+        "AWS S3", "Azure DataLake", "Azure Blob Containers", "Cloud Run", "Render", "Oracle Cloud"
       ]
     },
     "DevOps & Infrastructure": {
@@ -151,6 +151,13 @@
       "description": "A robust PHP-driven platform that automates resume creation. It securely processes user data via a MySQL backend to instantly generate professional profiles across multiple customizable templates.",
       "tags": ["Python","PHP", "HTML","CSS","Javascript"],
       "link": "https://github.com/roopesharch/ResumeEngine"
+    },
+    {
+      "title": "EchoSonic: AI Text-to-Speech Web Application",
+      "date": "January 2025 - February 2025",
+      "description": "Designed and deployed a production-ready AI text-to-speech web application using FastAPI and ONNX-based Piper voice models. Implemented model preloading, in-memory audio caching, concurrency control, and rate limiting for optimized performance. Hosted frontend on GitHub Pages and backend on cloud infrastructure (Google cloud Run / Oracle Cloud). Integrated playback controls and usage tracking for scalable free-tier deployment.",
+      "tags": ["Python","FastAPI","ONNX-based Piper AI models", "HTML","CSS","Javascript"],
+      "link": "https://github.com/roopesharch/EchoSonic"
     }
   ],
   "certifications": [
