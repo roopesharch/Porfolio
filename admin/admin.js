@@ -1,14 +1,11 @@
 /**
  * ADMIN LOGIC v24.0 - GOLD MASTER
- * Feature: External Config Loading & RLS Security
  */
 
-// --- 0. INSTANT SECURITY CHECK ---
 if (!localStorage.getItem('sb-portfolio-session')) {
     window.location.href = 'login.html';
 }
 
-// Read keys from config.js
 const SUPABASE_URL = CONFIG.SUPABASE_URL;
 const SUPABASE_ANON_KEY = CONFIG.SUPABASE_ANON_KEY;
 
@@ -27,7 +24,6 @@ function getSession() {
     return JSON.parse(sessionStr);
 }
 
-// 1. FETCH
 async function loadData() {
     const session = getSession();
     if (!session) return;
@@ -43,6 +39,8 @@ async function loadData() {
             }
         });
         
+        if (!response.ok) throw new Error("Connection failed");
+
         const result = await response.json();
 
         if (result && result.length > 0) {
@@ -50,17 +48,18 @@ async function loadData() {
             masterData = result[0].content;
             editor.value = JSON.stringify(masterData, null, 4);
             showStatus("Data Synced.", "#10b981");
+        } else {
+            editor.placeholder = "No data found in database.";
         }
     } catch (err) { 
+        editor.placeholder = "Error loading data. Check console.";
         showStatus("Fetch Error: " + err.message, "#ef4444"); 
     }
 }
 
-// 2. FORMAT & SYNTAX HIGHLIGHT
 function formatJson() {
     const rawValue = editor.value;
     if (!rawValue.trim()) return false;
-
     try {
         masterData = JSON.parse(rawValue);
         editor.value = JSON.stringify(masterData, null, 4);
@@ -81,11 +80,9 @@ function formatJson() {
     }
 }
 
-// 3. SECURE SAVE
 async function saveData() {
     const session = getSession();
     if (!session) return;
-
     if (!formatJson()) return; 
 
     showStatus("Syncing with Supabase...", "#6366f1");
@@ -117,7 +114,6 @@ async function saveData() {
     }
 }
 
-// 4. FORM HELPER
 function buildFormView(data, container, path = []) {
     if (path.length === 0) container.innerHTML = '';
     Object.keys(data).forEach(key => {
