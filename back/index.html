@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Fusion Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loadingScreen">
+        <div class="loader-content">
+            <div class="loader-text">ESTABLISHING SECURE CONNECTION...</div>
+            <div class="percentage" id="percentText">0%</div>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+    </div>
+
+    <canvas id="matrixCanvas"></canvas>
+
+    <div class="solar-core">
+        <h1 class="title" id="shimmerTitle">SOLAR TERMINAL</h1>
+    </div>
+
+    <script src="matrix.js"></script>
+    <script src="title.js"></script>
+</body>
+</html>

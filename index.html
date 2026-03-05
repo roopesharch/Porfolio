@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Terminal Gold Master</title>
+    <link href="https://fonts.cdnfonts.com/css/potra" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading-phase">
+    <div id="projectTextData" style="display:none;">Drive Into Portfolio</div>
+
+    <div id="loadingScreen">
+        <div class="loader-visuals">
+            <div id="circularFill" class="thick-ring-inner"></div>
+            <div class="loader-content">
+                <img src="img/gold_sdet_logo.png" alt="SDET Logo" class="loader-logo">
+                <div class="percentage" id="percentText">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="matrixCanvas"></canvas>
+
+    <nav class="side-menu" id="sideMenu">
+        <div class="menu-logo-container">
+            <img src="img/gold_sdet_logo.png" alt="SDET Logo" class="menu-sidebar-logo">
+        </div>
+        <ul>
+            <li class="menu-item active-page">
+                <a href="#"><i class="fa-solid fa-house-laptop"></i><span>HOME</span></a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-user-tie"></i><span>ABOUT</span></a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-microchip"></i><span>PROJECTS</span></a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-screwdriver-wrench"></i><span>SKILLS</span></a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-code-branch"></i><span>EXPERIENCE</span></a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-shield-halved"></i><span>CERTIFICATES</span></a>
+            </li>
+            <li class="menu-item">
+                <a href="#"><i class="fa-solid fa-satellite-dish"></i><span>CONTACT ME</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="content-wrapper">
+        <a href="#projects" class="project-link-group">
+            <div class="title-container">
+                <h1 class="title" id="shimmerTitle">W E L C O M E</h1>
+                <div id="scrollHint" class="arrow-container">
+                    <div class="gold-arrow">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </main>
+
+    <script src="matrix.js"></script>
+    <script src="title.js"></script>
+</body>
+</html>

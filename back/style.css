@@ -1,0 +1,115 @@
+/* style.css */
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Reduced perspective for mobile stability */
+    perspective: 1000px;
+}
+
+#matrixCanvas { 
+    position: fixed; top: 0; left: 0; z-index: 1; 
+    opacity: 0; transition: opacity 2s ease-in; 
+}
+#matrixCanvas.visible { opacity: 1; }
+
+/* Loader Styles */
+#loadingScreen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #ffffff;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Share Tech Mono', monospace;
+    transition: opacity 0.8s ease-out;
+}
+
+.loader-content { 
+    text-align: center; 
+    color: #FF4500; 
+    width: 80%; /* Responsive width */
+    max-width: 350px; 
+}
+.loader-text { font-size: 10px; letter-spacing: 2px; margin-bottom: 10px; opacity: 0.8; }
+.percentage { font-size: 40px; font-weight: 900; margin-bottom: 20px; }
+
+@media (min-width: 768px) {
+    .loader-text { font-size: 12px; }
+    .percentage { font-size: 56px; }
+}
+
+.progress-bar { width: 100%; height: 2px; background: rgba(255, 69, 0, 0.1); overflow: hidden; }
+.progress-fill { width: 0%; height: 100%; background: #FF4500; }
+
+/* Responsive Title */
+.solar-core { position: relative; z-index: 10; width: 100%; display: flex; justify-content: center; }
+.title {
+    font-family: 'Share Tech Mono', monospace;
+    /* clamp(min, preferred, max) ensures text is never too small or too big */
+    font-size: clamp(32px, 8vw, 85px); 
+    font-weight: 900;
+    margin: 0; display: flex; white-space: pre;
+    flex-wrap: wrap; /* Allows words to stack on very small screens */
+    justify-content: center;
+}
+
+.title span {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #ff0000, #ff8c00, #ffff00, #ff8c00, #ff0000);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 2px rgba(255, 69, 0, 0.5));
+    opacity: 0;
+}
+
+.title span.active {
+    animation: 
+        plasmaFlow 3s linear infinite,
+        entryZoom 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation-delay: 0s, calc(var(--d) * 0.08s);
+}
+
+.title span::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0; top: 0; width: 100%; z-index: -1;
+    background: linear-gradient(to top, transparent, #ff4500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(3px);
+    animation: heatVibration 0.1s infinite;
+    opacity: 0.4;
+}
+
+@keyframes entryZoom {
+    0% { 
+        opacity: 0; 
+        /* translateZ is smaller on mobile to prevent clipping */
+        transform: translateZ(400px) scale(3) rotateX(30deg); 
+        filter: blur(10px) brightness(3); 
+    }
+    100% { opacity: 1; transform: translateZ(0) scale(1) rotateX(0deg); filter: blur(0px) brightness(1); }
+}
+
+@keyframes plasmaFlow { to { background-position: 200% center; } }
+@keyframes heatVibration { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(1px, -1px); } }
+
+/* Desktop hover only (prevents sticky hover on touch) */
+@media (hover: hover) {
+    .title span:hover { 
+        transform: scale(1.15) translateY(-5px); 
+        filter: drop-shadow(0 0 15px rgba(255, 69, 0, 1)) brightness(1.4); 
+        transition: 0.2s; 
+    }
+}
