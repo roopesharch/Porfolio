@@ -29,32 +29,32 @@
             <img src="img/gold_sdet_logo.png" alt="SDET Logo" class="menu-sidebar-logo">
         </div>
         <ul>
-            <li class="menu-item active-page">
-                <a href="#"><i class="fa-solid fa-house-laptop"></i><span>HOME</span></a>
+            <li class="menu-item active-page" id="menu-home">
+                <a href="javascript:void(0)"><i class="fa-solid fa-house-laptop"></i><span>HOME</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-user-tie"></i><span>ABOUT</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-user-tie"></i><span>ABOUT</span></a>
+            </li>
+            <li class="menu-item" id="menu-projects">
+                <a href="javascript:void(0)"><i class="fa-solid fa-microchip"></i><span>PROJECTS</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-microchip"></i><span>PROJECTS</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-screwdriver-wrench"></i><span>SKILLS</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-screwdriver-wrench"></i><span>SKILLS</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-code-branch"></i><span>EXPERIENCE</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-code-branch"></i><span>EXPERIENCE</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-shield-halved"></i><span>CERTIFICATES</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-shield-halved"></i><span>CERTIFICATES</span></a>
-            </li>
-            <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-satellite-dish"></i><span>CONTACT ME</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-satellite-dish"></i><span>CONTACT ME</span></a>
             </li>
         </ul>
     </nav>
 
     <main class="content-wrapper">
-        <a href="#projects" class="project-link-group">
+        <div class="project-link-group" id="homeContent">
             <div class="title-container">
                 <h1 class="title" id="shimmerTitle">W E L C O M E</h1>
                 <div id="scrollHint" class="arrow-container">
@@ -63,10 +63,17 @@
                     </div>
                 </div>
             </div>
-        </a>
+        </div>
+
+        <section id="projectsContent" style="display: none; opacity: 0; width: 90%; height: 80%; transform: translateY(30px);">
+            <h2 class="project-main-title">LATEST PROJECTS</h2>
+            <div id="projectGrid">
+                </div>
+        </section>
     </main>
 
     <script src="matrix.js"></script>
     <script src="title.js"></script>
+    <script src="projects.js"></script>
 </body>
 </html>
