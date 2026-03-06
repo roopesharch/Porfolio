@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Terminal Gold Master</title>
+    <title>Roopesh Portfolio</title>
     <link href="https://fonts.cdnfonts.com/css/potra" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@700;900&family=Noto+Sans+Kannada:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@700;900&family=Noto+Sans+Kannada:wght@700;900&display=swap" rel="stylesheet">
+
+
 </head>
 <body class="loading-phase">
     <div id="projectTextData" style="display:none;">Drive Into Portfolio</div>
+
+    <div class="toggle-container">
+        <span id="toggleLabel">SWITCH MODE</span>
+        <label class="switch">
+            <input type="checkbox" id="bgToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
 
     <div id="loadingScreen">
         <div class="loader-visuals">
@@ -24,38 +38,48 @@
 
     <canvas id="matrixCanvas"></canvas>
 
+    <div id="scene3D" class="scene-3d">
+        <div class="roll-box">
+            <div class="side front">SDET</div>
+            <div class="side back">SDET</div>
+            <div class="side top">SDET</div>
+            <div class="side bottom">SDET</div>
+            <div class="side left">SDET</div>
+            <div class="side right">SDET</div>
+        </div>
+    </div>
+
     <nav class="side-menu" id="sideMenu">
         <div class="menu-logo-container">
             <img src="img/gold_sdet_logo.png" alt="SDET Logo" class="menu-sidebar-logo">
         </div>
-
         <ul>
-            <li class="menu-item active-page">
-                <a href="#"><i class="fa-solid fa-house-laptop"></i><span>HOME</span></a>
+            <li class="menu-item active-page" id="menu-home">
+                <a href="javascript:void(0)"><i class="fa-solid fa-house-laptop"></i><span>HOME</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-user-tie"></i><span>ABOUT</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-user-tie"></i><span>ABOUT</span></a>
+            </li>
+            <li class="menu-item" id="menu-projects">
+                <a href="javascript:void(0)"><i class="fa-solid fa-microchip"></i><span>PROJECTS</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-microchip"></i><span>PROJECTS</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-screwdriver-wrench"></i><span>SKILLS</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-screwdriver-wrench"></i><span>SKILLS</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-code-branch"></i><span>EXPERIENCE</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-code-branch"></i><span>EXPERIENCE</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-shield-halved"></i><span>CERTIFICATES</span></a>
             </li>
             <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-shield-halved"></i><span>CERTIFICATES</span></a>
-            </li>
-            <li class="menu-item">
-                <a href="#"><i class="fa-solid fa-satellite-dish"></i><span>CONTACT ME</span></a>
+                <a href="javascript:void(0)"><i class="fa-solid fa-satellite-dish"></i><span>CONTACT ME</span></a>
             </li>
         </ul>
     </nav>
 
     <main class="content-wrapper">
-        <a href="#projects" class="project-link-group">
+        <div class="project-link-group" id="homeContent">
             <div class="title-container">
                 <h1 class="title" id="shimmerTitle">W E L C O M E</h1>
                 <div id="scrollHint" class="arrow-container">
@@ -64,10 +88,18 @@
                     </div>
                 </div>
             </div>
-        </a>
+        </div>
+
+        <section id="projectsContent" style="display: none; opacity: 0; width: 90%; height: 80%; transform: translateY(30px);">
+            <h2 class="project-main-title">LATEST PROJECTS</h2>
+            <div id="projectGrid"></div>
+        </section>
     </main>
 
     <script src="matrix.js"></script>
     <script src="title.js"></script>
+    <script src="projects.js"></script>
+    <script src="cursor.js"></script>
+    <script src="3d.js"></script>
 </body>
 </html>
