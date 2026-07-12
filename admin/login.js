@@ -1,5 +1,5 @@
-const SUPABASE_URL = 'https://irkywlnfizmlzkltbepk.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlya3l3bG5maXptbHprbHRiZXBrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0NjM1ODIsImV4cCI6MjA4ODAzOTU4Mn0.10xYnVeD4SEdvpoCs9-ZU1cJRv8iCGLt5ELgbSWoFXE';
+const SUPABASE_URL = 'https://nnzhjaxprvcchnssaaku.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_FP-hYnEK3RX86o_Ll5RgYQ_Ye_ug2iM';
 
 document.getElementById('login-form').addEventListener('submit', async (e) => {
     e.preventDefault();
